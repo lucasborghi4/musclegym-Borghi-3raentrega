@@ -20,7 +20,7 @@ $mapaColor: (
     text-decoration: none; 
     font-family: $Oswald;
     color:$amarillo;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 @mixin titulo {
@@ -52,29 +52,213 @@ $mapaColor: (
 }
 
 .imgtitulo{
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
 }
 
 .cuerpoplanes{
     margin: 0;
     display: grid;
-    grid-template-areas: "header header header header"
-                        "mainplanes mainplanes mainplanes mainplanes"
-                        "footer footer footer footer";
+    grid-template-areas: "header"
+                        "mainplanes"
+                        "footer";
+}
+
+.cuerpoindex{
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+
+}
+
+.cuerpoanotate{
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header"
+                        "mainanotate"
+                        "footer";
+
 }
 
 .titulo{
-    @include fuente(42px)
+    @include fuente(30px)
 }
 
 mainplanes{
-    margin-top: 138px;
+    margin-top: 97.66px;
     grid-area: mainplanes;
     background-image: url('pexels-estudio-polaroid-3112004.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+main{
+    @extend mainplanes;
+    grid-area: main;
+    background-image: none;
+}
+
+.mainsedes{
+    font-family: $Dosis;
+    text-shadow: -2px -2px 1px $amarillo, 2px 2px 1px $amarillo, -2px 2px 1px $amarillo, 2px -2px 1px $amarillo;
+    font-size: 70px;
+    color: black;
+    font-weight: bolder;
+}
+
+.mainsedes1{
+    @extend .mainsedes;
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.categorias{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-family: $Dosis;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 100px;
+    background-color: black;
+    opacity: 0.75;
+    color: white;
+}
+
+.texto99{
+    font-family: 'Archivo Narrow', sans-serif;
+    width: 80%;
+    justify-content: center;
+    align-self: center;
+    opacity: 0.9;
+    font-size: 15px;
+    background-color:$amarillo;
+    color: black;
+    margin:0;
+    margin-bottom: 10px;
+}
+
+.linkmenu{
+    justify-content: center;
+    align-self: center;
+    background-color: black;
+    font-family: $Dosis;
+    color: white;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+a.linkmenu {
+    text-decoration: none;
+}
+
+a.linkmenu:visited {
+    color:white;
+}
+
+a.linkmenu:hover {
+    background: red;
+    color: black;
+    box-shadow: 5px 5px 3px black, -5px -5px 3px black;
+}
+
+.sede{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://northernvirginiamag.com/wp-content/uploads/2019/09/gold-feature-2.jpg);
+}
+
+.planes{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://img.etimg.com/photo/msid-74747053,quality-100/for-miles-a-great-bodyweight-workout-would-include-squats-push-ups-walking-lunges-.jpg);
+}
+
+.nosotros{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://www.wellnessliving.com/blog/wp-content/uploads/2019/04/Gym-Staff-Candidates.jpg);
+}
+
+.anotate{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://m8group.co.uk/wp-content/uploads/2020/02/want-a-weight-loss-calorie-burning.jpg);
+}
+
+
+.llegar{
+    @extend .mainsedes;
+    font-size:45px;
+}
+
+.titulocontacto{
+    @extend .llegar;
+}
+
+.datos{
+    margin: 0;
+    font-family: $Dosis;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    p{
+        margin-left: 7px;
+    }
+}
+
+.imagen{
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.minitexto{
+    margin: 0;
+    font-family: $Dosis;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.cuerposedes{
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header"
+                        "main1"
+                        "footer";
+
+}
+
+mainanotate{
+    @extend mainplanes;
+    grid-area: mainanotate;
+}
+
+mainresto{
+    @extend mainplanes;
+    grid-area: main1;
 }
 
 .nav-link{
@@ -175,7 +359,7 @@ footer{
         background-color: map-get($mapaColor, color-negro);
         font-family: $Oswald;
         color:map-get($mapaColor, color-amarillo);
-        font-size: 25px;
+        font-size: 20px;
         width: 100%;
         margin: 0;
     }
@@ -188,14 +372,13 @@ footer{
         gap:4rem;
         align-items:center;
         margin:0;
-        margin-top: 1rem;
         padding: 0;
     }
 
     .aptomedico{
         font-family: 'Exo', sans-serif;
         color:white;
-        font-size: 15px;
+        font-size: 12px;
         display: flex;
         justify-content: flex-start;
         margin: 0;
@@ -224,6 +407,148 @@ a.anotate2:hover {
     text-shadow: -2px -2px 1px black, 2px 2px 1px black, -2px 2px 1px black, 2px -2px 1px black;
 }
 
+.cuerponosotros{
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header"
+                        "mainnosotros"
+                        "footer";
+
+}
+
+.cuerpogracias{
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header"
+                        "maingracias"
+                        "footer";
+
+}
+
+mainnosotros{
+    @extend mainplanes;
+    grid-area: mainnosotros;
+}
+
+maingracias{
+    @extend mainplanes;
+    grid-area: maingracias;
+    width: 100%;
+    height: 577px;
+}
+
+.Nosotros{
+    @extend .introPlan
+}
+
+.card{
+    opacity: 0.9;
+    background-color: grey !important;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.fundador{
+    margin: 0;
+    font-family: $Dosis;
+    font-size: 32px;
+    text-shadow: -2px -2px 1px $amarillo, 2px 2px 1px $amarillo, -2px 2px 1px $amarillo, 2px -2px 1px $amarillo;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: map-get($mapaColor, color-negro);
+}
+
+.descripcion{
+    margin: 0;
+    font-family: $Dosis;
+    font-weight: bold;
+    font-size: 18px;
+    color: map-get($mapaColor, color-negro);
+    text-align: justify;
+    height: 150px;
+    margin-top: 4rem;
+}
+
+.foto{
+    width: 100%;
+    max-height: 504px;
+    max-width: 340px;
+}
+
+.descripcion2{
+    @extend .descripcion;
+    margin-top: 0;
+}
+
+.tituloydescri{
+    text-align: center;
+}
+
+.tituloanotate{
+   @include titulo();
+}
+
+.anotatecuestionario{
+    width:400px;
+    background: grey;
+    padding: 30px;
+    margin:auto;
+    margin-top: 25px;
+    border-radius: 4px;
+    opacity: 0.9;
+    font-family: $Dosis;
+    font-weight: bold;
+    color: black;
+    box-shadow: 7px 13px 37px $amarillo;
+    margin-bottom: 20px;
+}
+
+.placeh{
+    border: double $amarillo 1px;
+    color: $amarillo;
+}
+
+.placeh:focus{
+    background-color: $amarillo;
+}
+
+.elegir{
+    border: double $amarillo 1px;
+    color: grey;
+}
+
+.botons{
+    width:150px;
+    border: solid $amarillo 1px;
+    background-color: black;
+    color: $amarillo;
+}
+
+.gracias{
+    @include titulo();
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.botongracias{
+    justify-self: center;
+    margin-top: 50px;
+}
+
+.adentroboton:hover {
+    cursor: pointer ;
+}
+
+.adentroboton{
+    width:350px;
+    height: 80px;
+    background: black;
+    border: solid $amarillo 1px;
+    color: $amarillo;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 20px;
+}
+
 @media screen and (max-width:992px) {
     .clases{
         border-right: 0;
@@ -241,22 +566,53 @@ a.anotate2:hover {
         }
     }
 
-    .titulo{
-        font-size: 30px;
-    }
-    .navbar-brand{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: center;
-    }
-
     .imgtitulo{
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 65px;
     }
     
     mainplanes{
-        margin-top: 151px;
+        margin-top: 97.66px;
     }
-}
+
+    .descripcion{
+        margin-top: 1rem;
+    }
+
+    .introPlan2{
+        @include titulo();
+        font-size: 30px;
+    }
+
+    .anotate2{
+        @include titulo();
+        font-size: 30px;
+        margin-left: 7px;
+    }
+    
+    a.anotate2 {
+        @include titulo();
+        font-size: 30px;
+        margin-left: 7px;
+    }
+    
+    .anotate2 p{
+        @include titulo();
+        font-size: 30px;
+        margin-left: 7px;
+    }
+    
+    a.anotate2:visited {
+        @include titulo();
+        font-size: 30px;
+        margin-left: 7px;
+    }
+    
+    a.anotate2:hover {
+        @include titulo();
+        font-size: 30px;
+        margin-left: 7px;
+        color: $amarillo;
+        text-shadow: -2px -2px 1px black, 2px 2px 1px black, -2px 2px 1px black, 2px -2px 1px black;
+    }
+};

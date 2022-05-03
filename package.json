@@ -20,7 +20,9 @@
   "homepage": "https://github.com/lucasborghi4/musclegymBS-Borghi#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "boostrap": "^5.1.3",
+    "Animate.css": "^4"
   },
   "dependencies": {
     "abbrev": "^1.1.1",
