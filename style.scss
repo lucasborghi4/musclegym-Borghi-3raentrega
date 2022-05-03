@@ -616,3 +616,43 @@ maingracias{
         text-shadow: -2px -2px 1px black, 2px 2px 1px black, -2px 2px 1px black, 2px -2px 1px black;
     }
 };
+
+@media screen and (max-width:450px){
+    .introPlan2{
+        @include titulo();
+        font-size: 20px;
+    }
+
+    .anotate2{
+        @include titulo();
+        font-size: 20px;
+        margin-left: 7px;
+    }
+    
+    a.anotate2 {
+        @include titulo();
+        font-size: 20px;
+        margin-left: 7px;
+    }
+    
+    .anotate2 p{
+        @include titulo();
+        font-size: 20px;
+        margin-left: 7px;
+    }
+    
+    a.anotate2:visited {
+        @include titulo();
+        font-size: 20px;
+        margin-left: 7px;
+    }
+    
+    a.anotate2:hover {
+        @include titulo();
+        font-size: 20px;
+        margin-left: 7px;
+        color: $amarillo;
+        text-shadow: -2px -2px 1px black, 2px 2px 1px black, -2px 2px 1px black, 2px -2px 1px black;
+    }
+
+}
