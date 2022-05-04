@@ -76,6 +76,9 @@ main {
   opacity: 0.75;
   color: white; }
 
+.margen {
+  margin-top: 30px; }
+
 .texto99 {
   font-family: 'Archivo Narrow', sans-serif;
   width: 80%;
@@ -380,6 +383,9 @@ maingracias {
   color: black;
   box-shadow: 7px 13px 37px #e0b105;
   margin-bottom: 20px; }
+
+.descricuestionario {
+  font-size: 23px; }
 
 .placeh {
   border: double #e0b105 1px;
