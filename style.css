@@ -518,4 +518,6 @@ maingracias {
     text-shadow: -2px -2px 1px #e0b105, 2px 2px 1px #e0b105, -2px 2px 1px #e0b105, 2px -2px 1px #e0b105; }
   .imgtitulo {
     width: 55px;
-    height: 55px; } }
+    height: 55px; }
+  mainplanes, main, mainanotate, mainresto, mainnosotros, maingracias {
+    margin-top: 84.32px; } }
