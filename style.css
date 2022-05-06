@@ -79,6 +79,9 @@ main {
 .margen {
   margin-top: 30px; }
 
+.margenabajo {
+  margin-bottom: 20px; }
+
 .texto99 {
   font-family: 'Archivo Narrow', sans-serif;
   width: 80%;
